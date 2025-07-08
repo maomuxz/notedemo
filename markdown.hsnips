@@ -300,6 +300,14 @@ snippet :: iAm
 \quad 
 endsnippet
 
+snippet @mobius iAm
+\displaystyle\left<\begin{matrix} $1 \end{matrix}\right>$0
+endsnippet
+
+snippet xrar iAm
+\xrightarrow[$1]{} $0
+endsnippet 
+
 snippet huanghang iAm
 \quad \quad \quad \quad \qquad\!
 endsnippet
@@ -519,6 +527,10 @@ snippet -> "to" iAm
 \to 
 endsnippet
 
+snippet ~> "leadsto" iAm
+\leadsto 
+endsnippet
+
 snippet !> "mapsto" iAm
 \mapsto 
 endsnippet
@@ -583,7 +595,7 @@ snippet >= "greater than" iAm
 endsnippet
 
 snippet dis "displaystyle" iAm
-displaystyle 
+\displaystyle 
 endsnippet
 
 snippet <= "less than" iAm
@@ -919,9 +931,9 @@ endsnippet
 # ==== Static Matrix ====
 
 snippet pmat "pmat" wm
-\begin{pmatrix} 
+\begin{matrix} 
     ${1: } 
-\end{pmatrix} $0
+\end{matrix} $0
 endsnippet
 
 snippet bmat "pmat" wm
