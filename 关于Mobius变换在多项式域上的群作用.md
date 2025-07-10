@@ -6,12 +6,11 @@ $Mobius\text{变换是复分析中常用的一种分式型线性变换,定义为
 
 $f:\mathbb{C}\to\mathbb{C},\mathbb{z} \leadsto  \displaystyle\frac{az+b}{cz+d},\,$ 其中 $:\det{\begin{bmatrix} a & b \\ c & d \\\end{bmatrix}} \neq0$
 
-Proposition1.1 $:\text{全体} Mobius\text{变换关于复合运算构成群,记作}PGL(2,\mathbb{C})$
+>Proposition1.1 $:\text{全体} Mobius\text{变换关于复合运算构成群,记作}PGL(2,\mathbb{C})$
 
 Proof $:$
 
-$\text{记}\,f_{i}(z):=\displaystyle \frac{a_iz+b_i}{c_iz+d_i},i=1,2$
-$\text{结合律显然成立}$
+$\text{记}\,f_{i}(z):=\displaystyle \frac{a_iz+b_i}{c_iz+d_i},i=1,2\, , \,\text{结合律显然成立}$
 
 $1^{\circ}\;\text{单位元 }: \mathcal{E}(z)=z=\displaystyle\frac{z+0}{0+1},\text{而}\det \begin{bmatrix} 1 & 0 \\ 0 & 1 \\\end{bmatrix} =1$
 
@@ -24,9 +23,8 @@ $
 
 $\quad \quad \quad \quad \qquad\!=\mathcal{E}(z)=f\circ f_1^{-1}$
 
-**over**
 
-Proposition1.2 $:PGL(2,\mathbb{C})\simeq GL(\mathbb{C})/\mathbb{C}^{\mathrm{x}}$
+>Proposition1.2 $:PGL(2,\mathbb{C})\simeq GL(\mathbb{C})/\mathbb{C}^{\mathrm{x}}$
 
 Proof $:\;$
 
@@ -58,17 +56,21 @@ $\text{即 }:\;\,\forall \;M=\displaystyle\left<\begin{matrix} a & b \\ c & d \e
 
 $\text{同时 }:\;\text{记 }\det M\equiv \left\vert M \right\vert:=ad-bc\; , \;Tr(M):=a+d$
 
-$\text{并记 }:\; \dot{M}z:=(az+b)\; , \; j(M,z):=cz+d\, , \; \;\text{分别称为 }M\,\text{的上行和自守形式}$
+$\text{并记 }:\; \dot{M}z:=(az+b)\; , \; J(M,z):=cz+d\, , \; \;\text{分别称为 }M\,\text{的上行和自守形式}$
+
+>Lemma1.3 $:\,\forall \;M_1,M_2\in PGL(2,\mathbb{C})\, , \,J(M_1M_2,x)=J(M_1,M_2x)J(M_2,x)$
+
+Proof $:\;Trival$
 
 $\text{根据 }proposition\,1.2\;\text{设 }M_i=\displaystyle\left<\begin{matrix} a_i & b_i \\ c_i & d_i\end{matrix}\right>\; , \,i=1,2\, ,\text{则 }M_1(M_2z)=(M_1M_2)z\, , \,\text{且令 }\,t=M_1z\, , \,\text{就有 }z=M_1^{-1}t$
 
-Propositon1.3 $:\;\,\forall \;M=\displaystyle\left<\begin{matrix} a & b \\ c & d \end{matrix}\right> \in PGL(2,\mathbb{C})\, , \, z\in \mathbb{C}\, , \,\frac{d}{dz}(Mz)=\displaystyle \frac{\det M}{j^{2}(M,z)}\, , \, \mathcal{Im}(Mz)=\displaystyle \frac{\det M}{j^{2}(M,z)}\cdot \mathcal{Im}(z)$
+>Propositon1.3 $:\;\,\forall \;M=\displaystyle\left<\begin{matrix} a & b \\ c & d \end{matrix}\right> \in PGL(2,\mathbb{C})\, , \, z\in \mathbb{C}\, , \,\frac{d}{dz}(Mz)=\displaystyle \frac{\det M}{J^{2}(M,z)}\, , \, \mathcal{Im}(Mz)=\displaystyle \frac{\det M}{J^{2}(M,z)}\cdot \mathcal{Im}(z)$
 
 Proof $:\;Trival$
 
 $\text{考虑 }M=\displaystyle\left<\begin{matrix} a & b \\ c & d \end{matrix}\right>\in PGL(2,\mathbb{R})\;\text{的不动点 }z_1,z_2(\in \mathbb{C})\, , \,\text{以及 }M\text{ 形式矩阵的特征值 }\lambda_1 , \lambda_2(\in \mathbb{C})\, , \,\text{它们两个有如下关系 }:$
 
-Theorem1.4 $:\;\begin{cases} j(M,z_1)=\lambda_1\quad ,\quad \dot{M}z_1=\lambda_1z_1\\ j(M,z_2)=\lambda_2\quad ,\quad \dot{M}z_2=\lambda_2z_2\end{cases}$
+Theorem1.4 $:\;\begin{cases} J(M,z_1)=\lambda_1\quad ,\quad \dot{M}z_1=\lambda_1z_1\\ J(M,z_2)=\lambda_2\quad ,\quad \dot{M}z_2=\lambda_2z_2\end{cases}$
 
 Proof $:\;$
 
@@ -86,14 +88,7 @@ $\text{由韦达定理立马得证}$
 
 ## 1.2 $PGL(2，\mathbb{R})\,$在 $\mathbb{F}[x]$ 上的群作用
 
-$\text{对于 }\mathbb{R}[x]\text{ 我们定义 }PGL(2,\mathbb{R})\text{ 对 }\mathbb{R}[x]\text{ 的左作用 }*:\;PGL(2,\mathbb{R})\mathbf{x}\mathbb{R}[x]\to \mathbb{R}[Mx]\, , \,M*P \leadsto P(Mx)$
+$\text{对于 }\mathbb{R}[x]\text{ 我们定义 }PGL(2,\mathbb{R})\text{ 对 }\mathbb{R}[x]\text{ 的群作用 }*:\;PGL(2,\mathbb{R})\mathbf{x}\mathbb{R}[x]\to \mathbb{R}[Mx]\, , \,M*P \leadsto J^{\partial P}(M,x)P(Mx)$
 
-$\text{考虑 }P(x)\overset{\displaystyle n\overset{\Delta}{=}\partial P}{=\!=\!=\!=}\displaystyle \sum_{k=0}^{n}a_kx^{k}\, , \,M=\displaystyle\left<\begin{matrix} a & b \\ c & d \end{matrix}\right>\in PGL(2,\mathbb{R})$
-
-
-$\text{则 }M*P=P(Mx)=\displaystyle \sum_{k=0}^{n}a_k(Mx)^{k}=\displaystyle \frac{\displaystyle \sum_{k=0}^{n}a_k(\dot{M}x)^kj^{n-k}(M,x)}{j^{n}(M,x)}$
-
-$\text{再定义右作用 }*:\mathbb{R}[x]\mathbf{x}PGL(2,\mathbb{R})\to \mathbb{R}[x]\, , \,P*M \leadsto  j^{\partial P}(M,x)\cdot M*P$
-
-$\text{则 }P*M=\displaystyle \displaystyle \sum_{k=0}^{n}a_k(\dot{M}x)^kj^{n-k}(M,x)$
+$\text{考虑 }P(x)\overset{\displaystyle n\overset{\Delta}{=}\partial P}{=\!=\!=\!=}\displaystyle \sum_{k=0}^{n}a_kx^{k}\, , \,M=\displaystyle\left<\begin{matrix} a & b \\ c & d \end{matrix}\right>\in PGL(2,\mathbb{R})\, , \,\text{则 }M*P=J^n(M,x)P(Mx)=J^{n}(M,x)\displaystyle \sum_{k=0}^{n}a_k(Mx)^{k}=\displaystyle \displaystyle \sum_{k=0}^{n}a_k(\dot{M}x)^kJ^{n-k}(M,x)$
 
